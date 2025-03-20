@@ -187,7 +187,7 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 一行显示3个项目 */
+    grid-template-columns: repeat(4, 1fr); /* 一行显示3个项目 */
     gap: 1rem;          /* 项目之间的间距 */
     padding: 1rem;
 }
