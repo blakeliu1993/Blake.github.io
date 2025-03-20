@@ -1,48 +1,74 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小灰的首个网页</title>
+    <title>个人作品集</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- 添加 Font Awesome 图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!-- <h1>欢迎来到小灰的首个网页</h1> -->
-        <nav>
-            <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系我</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        
-        <h2 class="about-me">关于我</h2>
-        <p class="about-more">计算机毕业的测试，重走AI开发之路</p>
-        <div class="bg-images"></div>
-    </section>
-    <section id="projects">
-        <h2>项目</h2>
-        <p>这里是展示我的项目的地方。</p>
-    </section>
-    
-    <section id="contact">
-        <h2>联系我</h2>
-        <p>这里是联系我的方式。</p>
-        <!-- 添加社交图标和链接 -->
-        <div class="social-icons">
-            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.douyin.com/yourpage" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://weixin.qq.com/yourpage" target="_blank"><i class="fab fa-weixin"></i></a>
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">关于</a></li>
+            <li><a href="#projects">作品</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 欢迎区域 -->
+    <section id="welcome-section">
+        <div class="intro-container">
+            <h1 class="glowing-text">你好，我是Blake辉</h1>
+            <p class="typing-text">一名测试，一名开发，一名交付工程师，一名将自己作为产品打造的人。</p>
         </div>
     </section>
-    <footer>
-        <p>&copy; 2025 小灰的网页</p>
-    </footer>
+
+    <!-- 项目展示区 -->
+    <section id="projects">
+        <h2>我的作品集</h2>
+        <div class="projects-grid">
+            <a href="./LearnApp/12-WavePenguin/index.html" class="project-tile">
+                <img src="./res/img/img-Project-PenguinAnimation.png" alt="Wave Penguin Project">
+                <p><span class="code">&lt;</span> Wave Penguin <span class="code">/&gt;</span></p>
+            </a>
+            <a href="./LearnApp/14-CitySkyline/index.html" class="project-tile">
+                <img src="./res/img/img-CitySkyline.png" alt="City Skyline">
+                <p><span class="code">&lt;</span> City Skyline <span class="code">/&gt;</span></p>
+            </a>
+            <!-- 示例：添加更多项目 -->
+            <a href="./LearnApp/11-NurtritionLabel/index.html" class="project-tile">
+                <img src="./res/img/img-NutritionLabel.png" alt="Nutrition Label">
+                <p><span class="code">&lt;</span> Nutrition Label <span class="code">/&gt;</span></p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+        <h2>让我们一起合作</h2>
+        <div class="social-links">
+            <a href="https://github.com/blakeliu1993" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" id="wechat-link"><i class="fab fa-weixin"></i> WeChat</a>
+            <div id="qr-modal" class="qr-modal">
+                <img src="./res/img/img-wechatQR.jpeg" alt="WeChat QR Code" class="qr-image">
+            </div>
+            <a href="mailto:blakeliu1993@gmail.com"><i class="fas fa-envelope"></i> 发送邮件</a>
+        </div>
+    </section>
+
+    <script>
+        const wechatLink = document.getElementById('wechat-link');
+        const qrModal = document.getElementById('qr-modal');
+
+        wechatLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            qrModal.style.display = 'block';
+        });
+
+        qrModal.addEventListener('click', function() {
+            qrModal.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
